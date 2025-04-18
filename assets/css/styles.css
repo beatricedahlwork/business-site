@@ -7,8 +7,8 @@
 
   /*========== Colors ==========*/
   /*Color mode HSL(hue, saturation, lightness)*/
-  --first-color: hsl(260, 100%, 66%);
-  --second-color: hsl(328, 100%, 66%);
+  --first-color: hsl(42, 86%, 60%);
+  --second-color: hsl(317, 89%, 68%);
   --gradient-color: linear-gradient(75deg,
                     var(--second-color) 12%,
                     var(--first-color) 90%);
