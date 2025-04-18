@@ -1233,11 +1233,23 @@ body.dark-theme {
   background-color: #353ba9;
 }
 
-
 @media screen and (max-width: 576px) {
+  .home__container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .home__data {
+    order: 2;
+  }
+
   .home__img {
-    max-width: 100%;
+    order: 1;
+    margin-bottom: 2rem;
     width: 100%;
-    transform: scale(1.2); /* optional: makes it appear larger */
+    max-width: 600px;        /* controls how big it can grow */
+    transform: scale(1.1);   /* gentle zoom effect */
+    margin-inline: auto;
   }
 }
+
