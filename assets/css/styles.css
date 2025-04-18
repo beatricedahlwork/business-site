@@ -1195,7 +1195,7 @@ body.dark-theme {
 
   .home__img {
     width: 100%;
-    max-width: 1000px; /* you can tweak this */
+    max-width: 100%; /* you can tweak this */
     height: auto;
   }
 }
@@ -1229,3 +1229,5 @@ body.dark-theme {
 .back-button:hover {
   background-color: #353ba9;
 }
+
+
