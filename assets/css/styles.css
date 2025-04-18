@@ -1203,3 +1203,11 @@ body.dark-theme {
     justify-content: space-between;
   }
 }
+
+.product__img {
+  max-width: 250px;
+  height: auto;
+  display: block;
+  margin: 0; /* removes auto-centering */
+  text-align: left;
+}
