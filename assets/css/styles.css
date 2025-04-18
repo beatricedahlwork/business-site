@@ -354,7 +354,7 @@ body.dark-theme {
 
 .home__img {
   width: 100%;
-  max-width: 800px;  /* ⬅️ Try 900px or 1000px if you want it even bigger */
+  max-width: 900px;  /* ⬅️ Try 900px or 1000px if you want it even bigger */
   height: auto;
   display: block;
   margin: 0 auto;
@@ -1183,24 +1183,27 @@ body.dark-theme {
   }
 }
 
-@media screen and (min-width: 1248px) {
-  .container {
-    max-width: 1400px; /* or even 1600px if you want */
+@media screen and (max-width: 576px) {
+  .home__container {
+    grid-template-columns: 1fr;
+    text-align: center;
   }
 
-  .home__container {
-    grid-template-columns: 500px auto;
-    column-gap: 3rem;
+  .home__data {
+    order: 2;
   }
 
   .home__img {
+    order: 1;
+    margin-bottom: 2rem;
     width: 100%;
-    max-width: 100%; /* you can tweak this */
-    height: auto;
+    max-width: 100%;
+    transform: scale(1.2); /* optional zoom effect */
+    transition: transform 0.4s ease-in-out;
   }
 }
 
-/* For 2K resolutions (2048 x 1152, 2048 x 1536) */
+/* For 2K (2048 x 1152, 2048 x 1536) */
 @media screen and (min-width: 2000px) {
   .container {
     max-width: 1250px;
@@ -1231,3 +1234,10 @@ body.dark-theme {
 }
 
 
+@media screen and (max-width: 576px) {
+  .home__img {
+    max-width: 100%;
+    width: 100%;
+    transform: scale(1.2); /* optional: makes it appear larger */
+  }
+}
