@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lessons | YogaFit</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <script src="assets/js/main.js" defer></script>
+
+  <style>
+    .lessons-page {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    .lesson-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .lesson-card {
+      background-color: #f7f7f7;
+      border-radius: 12px;
+      padding: 1rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: transform 0.2s ease;
+    }
+
+    .lesson-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .lesson-card iframe {
+      width: 100%;
+      height: 200px;
+      border: none;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+
+    .lesson-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+
+    .back-button {
+      display: inline-block;
+      margin-top: 3rem;
+      padding: 0.8rem 1.5rem;
+      background-color: #7dbb91;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 8px;
+      transition: background-color 0.2s ease;
+    }
+
+    .back-button:hover {
+      background-color: #67a879;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header" id="header">
+    <!-- Insert your nav bar code here -->
+  </header>
+
+  <!-- Main Content -->
+  <main class="main">
+    <div class="lessons-page">
+      <h1>Lessons</h1>
+      <p>Explore our beginner to advanced yoga video lessons below. Click to watch and follow along!</p>
+
+      <div class="lesson-grid">
+        <!-- Lesson 1 -->
+        <div class="lesson-card">
+          <iframe src="https://www.youtube.com/embed/v7AYKMP6rOE" allowfullscreen></iframe>
+          <div class="lesson-title">Morning Yoga for Beginners</div>
+        </div>
+
+        <!-- Lesson 2 -->
+        <div class="lesson-card">
+          <iframe src="https://www.youtube.com/embed/4pKly2JojMw" allowfullscreen></iframe>
+          <div class="lesson-title">Gentle Stretch & Breath</div>
+        </div>
+
+        <!-- Lesson 3 -->
+        <div class="lesson-card">
+          <iframe src="https://www.youtube.com/embed/sTANio_2E0Q" allowfullscreen></iframe>
+          <div class="lesson-title">Evening Relaxation Flow</div>
+        </div>
+
+        <!-- Lesson 4 -->
+        <div class="lesson-card">
+          <iframe src="https://www.youtube.com/embed/oBu-pQG6sTY" allowfullscreen></iframe>
+          <div class="lesson-title">Yoga for Complete Beginners</div>
+        </div>
+
+        <!-- Lesson 5 -->
+        <div class="lesson-card">
+          <iframe src="https://www.youtube.com/embed/--jhKVdZOJM" allowfullscreen></iframe>
+          <div class="lesson-title">Core Strength Yoga Flow</div>
+        </div>
+
+        <!-- Lesson 6 -->
+        <div class="lesson-card">
+          <iframe src="https://www.youtube.com/embed/KsRP4keYxVk" allowfullscreen></iframe>
+          <div class="lesson-title">Flexibility & Balance Routine</div>
+        </div>
+      </div>
+
+      <!-- Back to Home Button -->
+      <div style="text-align: center;">
+        <a href="index.html" class="back-button">← Back to Home</a>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

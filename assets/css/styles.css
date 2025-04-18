@@ -353,8 +353,11 @@ body.dark-theme {
 }
 
 .home__img {
-  width: 320px;
-  justify-self: center;
+  width: 100%;
+  max-width: 800px;  /* ⬅️ Try 900px or 1000px if you want it even bigger */
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
 
 /*=============== BUTTON ===============*/
@@ -1181,12 +1184,19 @@ body.dark-theme {
 }
 
 @media screen and (min-width: 1248px) {
-  .home__container {
-    grid-template-columns: 500px 600px;
-    justify-content: initial;
+  .container {
+    max-width: 1400px; /* or even 1600px if you want */
   }
+
+  .home__container {
+    grid-template-columns: 500px auto;
+    column-gap: 3rem;
+  }
+
   .home__img {
-    width: 600px;
+    width: 100%;
+    max-width: 1000px; /* you can tweak this */
+    height: auto;
   }
 }
 
@@ -1210,4 +1220,12 @@ body.dark-theme {
   display: block;
   margin: 0; /* removes auto-centering */
   text-align: left;
+}
+
+.back-button {
+  background-color: #8832b4;
+}
+
+.back-button:hover {
+  background-color: #353ba9;
 }
