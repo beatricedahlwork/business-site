@@ -404,14 +404,15 @@ body.dark-theme {
 }
 
 .list__blob {
-  background-color: var(--first-color-light);
-  width: 230px;
-  height: 100px;
-  border-radius: 12.5rem;
+  background-color: transparent; /* or just remove this line */
+  width: auto;
+  height: auto;
+  border-radius: 0;
+  display: flex;
   justify-content: center;
   align-items: center;
-  transition: background .4s; /* for dark mode animation */
 }
+
 
 .list__blob img {
   width: 180px;
@@ -630,9 +631,11 @@ body.dark-theme {
 
 .follow__content-1 img, 
 .follow__content-2 img {
-  border-radius: 12.5rem;
-  border: 5px solid var(--first-color-light);
-  transition: border .4s; /* for dark mode animation */
+  width: 250px !important;
+  border: none;
+  border-radius: 0;
+  outline: none;
+  box-shadow: none;
 }
 
 .follow__content-1 {
@@ -648,7 +651,7 @@ body.dark-theme {
 
 .follow__img-1, 
 .follow__img-2 {
-  width: 140px;
+  width: 200px;
 }
 
 .follow__img-2 {
@@ -965,8 +968,9 @@ body.dark-theme {
   }
 
   .follow__content-1 {
-    grid-template-columns: max-content 200px max-content;
+    grid-template-columns: repeat(2, auto);
   }
+  
   .follow__data {
     grid-column: initial;
     order: 2;
@@ -1253,3 +1257,16 @@ body.dark-theme {
   }
 }
 
+img {
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+}
+
+/* ALSO for focus (when user clicks or tabs to the image) */
+img:focus, img:active {
+  outline: none !important;
+  box-shadow: none !important;
+  border: none !important;
+}
