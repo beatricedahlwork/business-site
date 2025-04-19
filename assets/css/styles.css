@@ -12,7 +12,7 @@
   --gradient-color: linear-gradient(75deg,
                     var(--second-color) 12%,
                     var(--first-color) 90%);
-  --first-color-light: hsl(260, 88%, 92%);
+  --first-color-light: hsl(207, 76%, 79%);
   --first-color-dark: hsl(260, 71%, 19%);
   --title-color: hsl(320, 79%, 70%);
   --text-color: hsl(260, 24%, 32%);
