@@ -3,22 +3,91 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Follow | YogaFit</title>
+  <title>Contact | YogaFit</title>
   <link rel="stylesheet" href="assets/css/styles.css" />
-  <script src="assets/js/main.js" defer></script>
+  <style>
+    .contact__form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      max-width: 500px;
+      width: 90%;
+      margin: 0 auto;
+    }
+
+    .contact__form input,
+    .contact__form textarea {
+      padding: 1rem;
+      font-size: 1rem;
+      border-radius: 0.75rem;
+      border: 1px solid #ccc;
+      width: 100%;
+    }
+
+    .contact__form textarea {
+      min-height: 150px;
+      resize: vertical;
+    }
+
+    .contact__form button {
+      background: var(--gradient-color);
+      color: white;
+      font-size: 1rem;
+      padding: 1rem;
+      border: none;
+      border-radius: 2rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .contact__form button:hover {
+      opacity: 0.9;
+    }
+
+    @media (max-width: 576px) {
+      .join__title {
+        font-size: 1.75rem;
+      }
+
+      .join__description {
+        font-size: 1rem;
+        padding-inline: 1rem;
+      }
+
+      .contact__form {
+        gap: 1rem;
+      }
+    }
+  </style>
 </head>
 <body>
   <!-- Header -->
   <header class="header" id="header">
-    <!-- Insert your nav bar code here -->
+    <!-- Your nav bar goes here -->
   </header>
 
   <!-- Main Content -->
   <main class="main">
-    <section class="section">
-      <h1>Follow</h1>
-      <p>Follow us on social media, subscribe to our newsletter, or get updates on new yoga content.</p>
+    <section class="section join__container" id="contact">
+      <div class="join__content">
+        <h1 class="join__title">Book a Yoga Class</h1>
+        <p class="join__description">Fill in your details and we'll be in touch to confirm your spot.</p>
+
+        <form action="https://formspree.io/f/mjkyqqzo" method="POST" class="contact__form">
+          <input type="hidden" name="_redirect" value="https://yourwebsite.com/thank-you.html">
+          <input type="text" name="name" placeholder="Full Name" required />
+          <input type="email" name="email" placeholder="Email Address" required />
+          <input type="tel" name="phone" placeholder="Phone Number" required />
+          <textarea name="message" placeholder="Additional Notes (Optional)"></textarea>
+          <button type="submit">Submit Booking</button>
+        </form>
+      </div>
     </section>
+
+    <!-- Home Button -->
+    <div style="text-align: center; margin-top: 2rem;">
+      <a href="index.html" class="button">← Back to Home</a>
+    </div>
   </main>
 </body>
 </html>
